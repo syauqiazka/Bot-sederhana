@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "terima kasih": "Sama-sama ya! 😊",
         "bye": "Dadah~ sampai jumpa lagi 👋",
         "kata kata": "Aku gak lagi nunggu kamu balik… cuma belum nemu alasan buat berhenti mikirin kamu.",
-        "kata kata bijak": "roda selalu berputar",
-        "faray": "aku gak kenal orang jelek",
-        "marcell": "ohhh, marcell yang kayak kumis lele itu",
+        "kata kata bijak": "Roda selalu berputar",
+        "faray": "Aku gak kenal orang jelek",
+        "marcell": "ohhh, Marcell yang kayak kumis lele itu",
         "ayam": "ayam ayam ayam",
     };
 
