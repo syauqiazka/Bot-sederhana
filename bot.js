@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Daftar keyword & responnya
     const responKeyword = {
-        "nama": "Namaku Bot Syaqui, bot paling ramah di dunia maya 😎",
+        "nama": "Namaku Bot Syauqi, bot paling ramah di dunia maya 😎",
         "kabar": "Aku baik, terima kasih! Kamu gimana?",
         "hobi": "Hobiku ngobrol dan belajar hal baru. Kamu?",
         "pacar": "Aku belum punya pacar, masih fokus belajar 🧠",
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "irpan": "Ohh,Irpan yang kusam itu yak",
         "rania": "siapa itu? Gak kenal saya",
         "irfan": "Ohh,Irpan yang kusam itu yak",
+        "Hts": "Janagan tanya yang kayak gitu ya, ntar ada yang galau lagi",
     };
 
     function getBotReply(input) {
