@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getBotReply(input) {
         const msg = input.toLowerCase();
-        let balasan = "Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? 🤔";
+        let balasan = "Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? Atau mungkn belum di tambahin oleh admin 🤔";
 
         for (const keyword in responKeyword) {
             if (msg.includes(keyword)) {
