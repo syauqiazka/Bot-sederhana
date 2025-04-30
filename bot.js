@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "ayam": "ayam ayam ayam",
         "irpan": "Ohh,Irpan yang kusam itu yak",
         "rania": "siapa itu? Gak kenal saya",
+        "irfan": "Ohh,Irpan yang kusam itu yak",
     };
 
     function getBotReply(input) {
