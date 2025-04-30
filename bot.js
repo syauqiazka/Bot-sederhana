@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "faray": "Aku gak kenal orang jelek",
         "marcell": "ohhh, Marcell yang kayak kumis lele itu",
         "ayam": "ayam ayam ayam",
+        "irpan: "Ohh,Yang ims ims itu yak",
+        "irfan : "Ohh,Yang ims ims itu yak",
+        
     };
 
     function getBotReply(input) {
