@@ -60,5 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Pertanyaan awal
-    pertanyaan.innerHTML = "Hai! Silakan tanya apa saja 😉";
+    pertanyaan.innerHTML = `
+  <img src="img/grant-yapping.gif" alt="Grant Yapping"
+       style="max-width: 150px; display: block; margin: 0 auto 10px;">
+  <p>Hai! Silakan tanya apa saja 😉</p>
+`;
 });
