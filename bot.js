@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Pertanyaan awal
     pertanyaan.innerHTML = `
-  <img src="img/grant-yapping.gif" alt="Grant Yapping"
+  <img src="image/grant-yapping.gif" alt="Grant Yapping"
        style="max-width: 150px; display: block; margin: 0 auto 10px;">
   <p>Hai! Silakan tanya apa saja 😉</p>
 `;
