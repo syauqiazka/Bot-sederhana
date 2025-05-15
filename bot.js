@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "nama": `
   <img src="image/whhyyyy-vanish.gif" alt="whhyyyy vanish"
        style="max-width: 150px; display: block; margin: 0 auto 10px;">
-  <p>Nama ?🤔</p>
+  <p style="background-color: #FFF;">Nama ?🤔</pstyle=>
 ` ,
         "kabar": "Aku baik, terima kasih! Kamu gimana?",
         "hobi": "Hobiku ngobrol dan belajar hal baru. Kamu?",
@@ -25,12 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "faray": "aku gak kenal orang jelek",
         "marcell": "ohhh, marcell yang kayak kumis lele itu",
         "ayam": "ayam ayam ayam",
-        
     };
 
     function getBotReply(input) {
         const msg = input.toLowerCase();
-        let balasan = ""; ;
+        let balasan = "";
 
         for (const keyword in responKeyword) {
             if (msg.includes(keyword)) {
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             balasan = `
   <img src="image/moona-hoshinova.gif" alt="moona hoshinova"
        style="max-width: 150px; display: block; margin: 0 auto 10px;">
-  <p>Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? 🤔</p>
+  <p style="background-color: #FFF;">Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? 🤔</p>
 `;
         }
 
@@ -53,32 +52,45 @@ document.addEventListener("DOMContentLoaded", function () {
         const input = jawabanInput.value.trim();
 
         if (input === "") {
-            pertanyaan.innerHTML = "Tulis dulu dong 😅";
+            "Tulis dulu dong 😅";
             return;
         }
-        
 
+        // Tambah pesan user ke container chat
+        const userDiv = document.createElement("div");
+        userDiv.className = "chat-user";
+        userDiv.textContent = input;
+        pertanyaan.appendChild(userDiv);
 
+        // Ambil balasan dari bot
+        const reply = getBotReply(input);
 
-            const reply = getBotReply(input);
-            pertanyaan.innerHTML = reply;
-            jawabanInput.value = "";
-        }
+        // Tambah balasan bot ke container chat (bisa ada HTML)
+        const botDiv = document.createElement("div");
+        botDiv.className = "chat-bot";
+        botDiv.innerHTML = reply;
+        pertanyaan.appendChild(botDiv);
 
-        // Event handler
-        tombol.addEventListener("click", botstart);
-        jawabanInput.addEventListener("keypress", function (e) {
-            if (e.key === "Enter") {
-                botstart();
-            }
-        });
+        // Scroll otomatis ke bawah
+        pertanyaan.scrollTop = pertanyaan.scrollHeight;
 
-        // Pertanyaan awal
-        pertanyaan.innerHTML =`
-  <img src="image/grant-yapping.gif" alt="Grant Yapping"
-       style="max-width: 150px; display: block; margin: 0 auto 10px;">
-  <p>Hai! Silakan tanya apa saja 😉</p>
-`;
-
+        // Kosongkan input
+        jawabanInput.value = "";
     }
-);
+
+    // Event handler
+    tombol.addEventListener("click", botstart);
+    jawabanInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            botstart();
+        }
+    });
+
+    // Pertanyaan awal
+    pertanyaan.innerHTML = pertanyaan.innerHTML = `
+    <img src="image/grant-yapping.gif" alt="Grant Yapping"
+          style="max-width: 150px; display: block; margin: 0 auto 10px;">
+    <p style="background-color: #FFF;">Hai! Silakan tanya apa saja 😉</p>
+  `;;
+
+});
