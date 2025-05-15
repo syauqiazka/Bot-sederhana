@@ -26,11 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getBotReply(input) {
         const msg = input.toLowerCase();
-        let balasan =`
-  <img src="image/moona-hoshinova.gif" alt="moona hoshinova"
-       style="max-width: 150px; display: block; margin: 0 auto 10px;">
-  <p>Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? 🤔</p>
-`;
+        let balasan ="";
 
         for (const keyword in responKeyword) {
             if (msg.includes(keyword)) {
@@ -38,6 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
             }
         }
+        if (!balasan) {
+            balasan = `
+  <img src="image/moona-hoshinova.gif" alt="moona hoshinova"
+       style="max-width: 150px; display: block; margin: 0 auto 10px;">
+  <p>Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? 🤔</p>
+`;
 
         return balasan;
     }
