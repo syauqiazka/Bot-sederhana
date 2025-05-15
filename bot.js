@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "kata kata": "Aku gak lagi nunggu kamu balik… cuma belum nemu alasan buat berhenti mikirin kamu.",
         "kata kata bijak": "roda selalu berputar",
         "faray": "aku gak kenal orang jelek",
-        "marcell": "ohhh, marcell yang kayak kumis lele itu",
         "ayam": "ayam ayam ayam",
     };
 
