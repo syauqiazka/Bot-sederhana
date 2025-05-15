@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     pertanyaan.innerHTML = pertanyaan.innerHTML = `
     <img src="image/grant-yapping.gif" alt="Grant Yapping"
           style="max-width: 150px; display: block; margin: 0 auto 10px;">
-    <p style="background-color: #FFF;">Hai! Silakan tanya apa saja 😉</p>
+    <p style="background-color: transparent;">Hai! Silakan tanya apa saja 😉</p>
   `;;
 
 });
