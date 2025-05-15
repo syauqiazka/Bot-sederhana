@@ -5,7 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Daftar keyword & responnya
     const responKeyword = {
-        "nama": "Namaku Bot Syauqi, bot paling ramah di dunia maya 😎",
+        "nama": `
+  <img src="image/whhyyyy-vanish.gif" alt="whhyyyy vanish"
+       style="max-width: 150px; display: block; margin: 0 auto 10px;">
+  <p>Nama ?🤔</p>
+` ,
         "kabar": "Aku baik, terima kasih! Kamu gimana?",
         "hobi": "Hobiku ngobrol dan belajar hal baru. Kamu?",
         "pacar": "Aku belum punya pacar, masih fokus belajar 🧠",
@@ -17,16 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
         "terima kasih": "Sama-sama ya! 😊",
         "bye": "Dadah~ sampai jumpa lagi 👋",
         "kata kata": "Aku gak lagi nunggu kamu balik… cuma belum nemu alasan buat berhenti mikirin kamu.",
-        "kata kata bijak": "Roda selalu berputar",
-        "faray": "Aku gak kenal orang jelek",
-        "marcell": "ohhh, Marcell yang kayak kumis lele itu",
+        "kata kata bijak": "roda selalu berputar",
+        "faray": "aku gak kenal orang jelek",
+        "marcell": "ohhh, marcell yang kayak kumis lele itu",
         "ayam": "ayam ayam ayam",
-        "irpan": "Ohh,Irpan yang kusam itu yak",
+        
     };
 
     function getBotReply(input) {
         const msg = input.toLowerCase();
-        let balasan ="";
+        let balasan = ""; ;
 
         for (const keyword in responKeyword) {
             if (msg.includes(keyword)) {
@@ -40,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
        style="max-width: 150px; display: block; margin: 0 auto 10px;">
   <p>Hmm, aku belum ngerti maksudmu... bisa diketik dengan cara lain? 🤔</p>
 `;
+        }
 
         return balasan;
     }
@@ -51,24 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
             pertanyaan.innerHTML = "Tulis dulu dong 😅";
             return;
         }
+        
 
-        const reply = getBotReply(input);
-        pertanyaan.innerHTML = reply;
-        jawabanInput.value = "";
-    }
 
-    // Event handler
-    tombol.addEventListener("click", botstart);
-    jawabanInput.addEventListener("keypress", function (e) {
-        if (e.key === "Enter") {
-            botstart();
+
+            const reply = getBotReply(input);
+            pertanyaan.innerHTML = reply;
+            jawabanInput.value = "";
         }
-    });
 
-    // Pertanyaan awal
-    pertanyaan.innerHTML = `
+        // Event handler
+        tombol.addEventListener("click", botstart);
+        jawabanInput.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                botstart();
+            }
+        });
+
+        // Pertanyaan awal
+        pertanyaan.innerHTML =`
   <img src="image/grant-yapping.gif" alt="Grant Yapping"
        style="max-width: 150px; display: block; margin: 0 auto 10px;">
   <p>Hai! Silakan tanya apa saja 😉</p>
 `;
-});
+
+    }
+);
